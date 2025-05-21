@@ -57,7 +57,7 @@ if not st.session_state.authenticated:
         if result is True:
             st.session_state.authenticated = True
             st.session_state.message = "Authentication successful!"
-            st.experimental_rerun()
+            st.rerun()
         else:
             st.session_state.message = result
     
@@ -93,4 +93,4 @@ else:
     if st.button("Logout"):
         st.session_state.authenticated = False
         st.session_state.message = "Logged out successfully!"
-        st.experimental_rerun()
+        st.rerun()
